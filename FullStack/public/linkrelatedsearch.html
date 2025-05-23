@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search Engine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 5px solid #000000;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-item a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Search Engine</h1>
+        <input type="text" id="search-query" placeholder="Enter search term...">
+        <button id="search1-btn">Search</button>
+        <button onclick="window.location.href='index.html'" class="button">All Task</button> 
+        <div id="results"></div>
+    </div>
+    <script src="linkrelatedsearch.js"></script>
+</body>
+<main id="bg-video">
+    <video autoplay muted loop id="bg-video">
+      <source src="dragons-gaze-moewalls-com.mp4" type="video/mp4">
+    </video>
+</html>

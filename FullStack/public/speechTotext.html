@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech To Text Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* styles.css */
+
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5a623, #f29e77, #f06c00);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Styling */
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+button {
+    background: #f5a623;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #f29e77;
+    transform: scale(1.05);
+}
+
+ .btn {
+           margin: 40px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background:  #f5a623;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.836);
+            margin-bottom: 500px;
+        }
+        .btn:hover {
+      background-color:rgba(255, 255, 255, 0.623);
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .glowing-text {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 10px #e91e63, 0 0 20px #e91e63, 0 0 30px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63;
+      animation: glowAnimation 3s ease-in-out infinite alternate;
+    }
+    @keyframes glowAnimation {
+      from {
+        text-shadow: 0 0 10px #940000, 0 0 20px #940000, 0 0 30px #940000, 0 0 40px #940000, 0 0 50px #940000;
+      }
+      to {
+        text-shadow: 0 0 20px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000;
+      }
+    }
+
+.output {
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 50px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    </head>
+    <body>
+         <button onclick="window.location.href='index.html'" class="btn">All Task</button>
+        <div class="container">    
+        <div class="card">
+                <h1>Speech to Text</h1>
+                <button id="start-btn">Start</button>
+                <div class="output" id="text">Your speech will appear here...</div>
+            </div>
+        </div>
+    
+        <script src="speechTotext.js"></script>
+    </body>
+    <main id="bg-video">
+    <video autoplay muted loop id="bg-video">
+      <source src="vegeta-ultra-ego-dragon-ball-super-moewalls-com.mp4" type="video/mp4">
+    </video>
+    </html>
+    
